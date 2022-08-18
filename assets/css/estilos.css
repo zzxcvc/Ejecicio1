@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(6, 11, 37);
+    color: aliceblue;
+    opacity: 0.9;
+    font-family:Arial, Helvetica, 
+    
+    ;
+}
+header{
+
+    text-align: center
+    
+    
+    
+}
+ div{
+    
+    border-radius:59%;
+    padding: 15px;
+        border-image: url(images/conce.jpg.jpg) 30 round;
+  }
