@@ -1,15 +1,21 @@
-body {
-    background-color: rgb(6, 11, 37);
-    color: aliceblue;
-    opacity: 0.9;
-    font-family:Arial, Helvetica, 
-    
-    ;
+p.parrafo {
+    font-size: 13 px;
+    border:solid; color: aliceblue;
 }
+
+
+
+body{
+    background-image: url('../images/fondojpg.jpg');
+    color: bisque;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 header{
 
     text-align: center
-    
     
     
 }
@@ -19,3 +25,9 @@ header{
     padding: 15px;
         border-image: url(images/conce.jpg.jpg) 30 round;
   }
+
+  .fondojpg {
+    background-image: url(images/fondojpg.jpg) ;
+    width: 100px;
+    height: 100px;
+}
