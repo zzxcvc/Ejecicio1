@@ -6,28 +6,50 @@ p.parrafo {
 
 
 body{
+    
     background-image: url('../images/fondojpg.jpg');
+    font-family:'monserrat', sans-serif;
+
     color: bisque;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-header{
-
-    text-align: center
-    
-    
+a{
+    text-decoration: none;
 }
- div{
-    
-    border-radius:59%;
-    padding: 15px;
-        border-image: url(images/conce.jpg.jpg) 30 round;
-  }
+    .logo{ 
+        text-align:center;
+        border: 2px solid purple;
+        
+    }
+
+    .popi{
+        text-align: center;
+    }
+
+
+.container {
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+   
+} 
+
+
 
   .fondojpg {
     background-image: url(images/fondojpg.jpg) ;
     width: 100px;
     height: 100px;
+}
+
+div.conce {
+    display: flex;
+    justify-content: center;
+
 }
