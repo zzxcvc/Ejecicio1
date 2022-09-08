@@ -1,14 +1,59 @@
 p.parrafo {
     font-size: 13 px;
-    border:solid; color: aliceblue;
+    border: solid;
+    color: aliceblue;
 }
 
+.neonlights-logo {
+    font-family: 'Staatliches', cursive;
+    color: cyan;
+    font-size: 24px;
+}
+
+.container-contact{
+    width: 50%;
+    margin: 32px;
 
 
-body{
-    
+}
+
+.navbar {
+    background-color: transparent;
+
+}
+
+.color-purple {
+    color: purple;
+}
+
+.img-banner {
+    width: 511px;
+}
+
+.content-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.subtitle-banner{
+    font-size: 12px;
+}
+
+.text-banner {
+    font-family: 'Staatliches', cursive;
+    font-size: 32px;
+    margin-left: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+
     background-image: url('../images/fondojpg.jpg');
-    font-family:'monserrat', sans-serif;
+    font-family: 'monserrat', sans-serif;
 
     color: bisque;
     background-repeat: no-repeat;
@@ -16,18 +61,32 @@ body{
     background-size: cover;
 }
 
-a{
+a {
     text-decoration: none;
 }
-    .logo{ 
-        text-align:center;
-        border: 2px solid purple;
-        
-    }
 
-    .popi{
-        text-align: center;
-    }
+.logo {
+    text-align: center;
+    border: 2px solid purple;
+
+}
+.titulos{
+    font-size: 32px;
+    color: purple;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 32px;
+    text-align: center;
+
+
+}
+
+.banner {
+    background-color: #000;
+    height: 600px;
+    text-align: center;
+    border: 2px solid purple;
+
+}
 
 
 .container {
@@ -37,13 +96,13 @@ a{
     padding: 20px;
     text-align: center;
     letter-spacing: 1px;
-   
-} 
+
+}
 
 
 
-  .fondojpg {
-    background-image: url(images/fondojpg.jpg) ;
+.fondojpg {
+    background-image: url(images/fondojpg.jpg);
     width: 100px;
     height: 100px;
 }
@@ -54,8 +113,8 @@ div.conce {
 
 }
 
- .footer{
-        background-color: hsl(0,0%,4%); 
-        color: hsl(0,0%,86%);   
+.footer {
+    background-color: hsl(0, 0%, 4%);
+    color: hsl(0, 0%, 86%);
 
 }
