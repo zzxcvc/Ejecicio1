@@ -55,7 +55,7 @@ div.conce {
 }
 
  .footer{
-    background-color: black;
-    
+        background-color: hsl(0,0%,4%); 
+        color: hsl(0,0%,86%);   
 
 }
