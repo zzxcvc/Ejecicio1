@@ -60,19 +60,22 @@
       </li>
     </ul> -->
 
+    <h2 class="titulos"> Contacto </h2>
+    <br>
+    
 <div class="container-contact">
 
   <div class="field">
-    <label class="label">Name</label>
+    <label class="label">Nombre completo</label>
     <div class="control">
-      <input class="input" type="text" placeholder="Text input">
+      <input class="input" type="text" placeholder="Cristian Gonzalez Arjona" required>
     </div>
   </div>
   
   <div class="field">
-    <label class="label">Username</label>
+    <label class="label">Nombre de Usuario</label>
     <div class="control has-icons-left has-icons-right">
-      <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+      <input class="input is-success" type="text" placeholder="Text input" value="bulma" required>
       <span class="icon is-small is-left">
         <i class="fas fa-user"></i>
       </span>
@@ -82,11 +85,12 @@
     </div>
     <p class="help is-success">This username is available</p>
   </div>
+
   
   <div class="field">
     <label class="label">Email</label>
     <div class="control has-icons-left has-icons-right">
-      <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+      <input class="input is-danger" type="email" placeholder="Email input" value="hello@example.com" required>
       <span class="icon is-small is-left">
         <i class="fas fa-envelope"></i>
       </span>
@@ -96,8 +100,15 @@
     </div>
     <p class="help is-danger">This email is invalid</p>
   </div>
-  
+
   <div class="field">
+    <label for="caja-texto-telefono">Número de Contacto </label>
+        <div class="control">
+      <input class="input" type="text" id="caja-texto-telefono" placeholder="Numero de telefono sin codigo de area y sin +" required>
+    </div>
+  </div>
+  
+  <!--<div class="Genero">
     <label class="label">Subject</label>
     <div class="control">
       <div class="select">
@@ -107,10 +118,10 @@
         </select>
       </div>
     </div>
-  </div>
+  </div> -->
   
   <div class="field">
-    <label class="label">Message</label>
+    <label class="label">Mensaje</label>
     <div class="control">
       <textarea class="textarea" placeholder="Textarea"></textarea>
     </div>
@@ -125,7 +136,7 @@
     </div>
   </div>
   
-  <div class="field">
+  <!--<div class="field">
     <div class="control">
       <label class="radio">
         <input type="radio" name="question">
@@ -136,16 +147,81 @@
         No
       </label>
     </div>
-  </div>
+  </div> -->
   
   <div class="field is-grouped">
     <div class="control">
-      <button class="button is-link">Submit</button>
+      <button class="button is-link">Enviar</button>
     </div>
     <div class="control">
       <button class="button is-link is-light">Cancel</button>
     </div>
   </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+
+integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
+$('#contactForm').on('submit', function (event) {
+
+event.preventDefault(); // prevent reload
+
+var cajaNombre= $('#caja-texto-nombre').val;
+var cajaTelefono= $('#caja-texto-telefono').val;
+var cajaEmail= $('#caja-texto-email').val;
+var cajaComentario= $('#caja-texto-comentario').val;
+
+alert (cajaNombre, cajaTelefono, cajaEmail, cajaComentario)
+
+var formData = new FormData(this);
+
+formData.append('service_a6nkug9', 'service_xa42f1q');
+
+formData.append('template_m3vp9cu', 'template_hvkervc');
+
+formData.append('My6cQhzhVKuDi3MWY', 'W8wCKti6oi2hoY0_W');
+
+
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+
+  type: 'POST',
+
+  data: formData,
+
+  contentType: false, // auto-detection
+
+  processData: false // no need to parse formData to string
+
+}).done(function () {
+
+  alert('Your mail is sent!');
+
+}).fail(function (error) {
+
+  alert('Oops... ' + JSON.stringify(error));
+
+});
+
+});
+
+</script>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Luces Neón Pucón - </strong> by <a href="index.html">Cristian Alejandro</a>. The source code is
+      licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
   </body>
 </html>
