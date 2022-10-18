@@ -6,7 +6,7 @@ p.parrafo {
 
 .neonlights-logo {
     font-family: 'Staatliches', cursive;
-    color: cyan;
+    color: rgb(0, 255, 255);
     font-size: 24px;
 }
 
@@ -117,4 +117,19 @@ div.conce {
     background-color: hsl(0, 0%, 4%);
     color: hsl(0, 0%, 86%);
 
+}
+
+.for{
+    color: #00ffff;
+
+}
+
+label {
+    color: #00ffff;
+
+}
+
+.display-5 {
+
+    
 }

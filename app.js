@@ -40,12 +40,12 @@ document.querySelector("#student-form").addEventListener("submit", (e) =>{
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>$(firsName)</td>
-                <td>$(lastName)</td>
-                <td>$(rollNo)</td>
+                <td> ${firsName} </td>
+                <td>${lastName}</td>
+                <td>${rollNo}</td>
                 <td>
                 <a href="#" class="btn btn-warning btn-sm edit">Editar</a>
-                <a href="#" class="btn btn-danger btn-sm delete">borrar</a> </td>
+                <a href="#" class="btn btn-danger btn-sm delete" >borrar</a> </td>
 
             `;
                 
