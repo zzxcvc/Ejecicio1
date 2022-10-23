@@ -1,6 +1,6 @@
 var selectedRow = null;
 
-// show alerts (mostrar alertas)
+// Mostrar alertas
 function showAlert(message, className){
     const div = document.createElement("div");
     div.className = 'alert alert-${className}';
@@ -13,29 +13,50 @@ function showAlert(message, className){
     setTimeout(() => document.querySelector(".alert").remove(), 3000);   
 }
 
-// Clear all fields (borrar todos los campos)
+// borrar todos los campos
 function clearFields(){
     document.querySelector("#firsName").value = "";
     document.querySelector("#lastName").value = "";
     document.querySelector("#rollNo").value = "";
 }
 
-// Add Data (añadir datos)
+// añadir datos
 
 document.querySelector("#student-form").addEventListener("submit", (e) =>{
     e.preventDefault();
 
-    // Get form valeus (obtener formulario valeus)
+    // obtener formulario valeus
     const firstName = document.querySelector("#firstName").value;
     const lastName = document.querySelector("#lastName").value;
     const rollNo = document.querySelector("#rollNo").value;
 
-    // validate (validar)
+    addUserbtn.addEventListener("click", function(){
+        const addUserInputvalue = addUserInput.value;
+
+        if(addUserInputvalue){
+            let WebUSer = localStorage.getItem("localUser");
+
+            if(WebUSer == null) {
+                userObject =[];
+            }
+
+            else{userObject - JSON.àrse(WebUSer);
+            }
+            userObject.push({
+                'user':addUserInputvalue
+            });
+            localStorage.setItem("localUser" , JSON.stringify(userObject));
+            addUserInput.value - '';
+        }
+        mostrarUser();
+    })
+
+    // validar
     if(firstName == "" || lastName == "" || rollNo == ""){
         showAlert("Por favor, complete todos los campos", "danger");
     }
     else{
-        if(selectedRow == null){
+        if(selectedRow == null){ 
             const list = document.querySelector("#student-list");
             const row = document.createElement("tr");
 
@@ -45,7 +66,7 @@ document.querySelector("#student-form").addEventListener("submit", (e) =>{
                 <td>${rollNo}</td>
                 <td>
                 <a href="#" class="btn btn-warning btn-sm edit">Editar</a>
-                <a href="#" class="btn btn-danger btn-sm delete" >borrar</a> </td>
+                <a href="#" class="btn btn-danger btn-sm delete">borrar</a> </td>
 
             `;
                 
@@ -67,12 +88,12 @@ document.querySelector("#student-form").addEventListener("submit", (e) =>{
 
 });
 
-// Edit Data (Editar datos)
+// Editar datos
 
 document.querySelector("#student-list").addEventListener("click", (e) =>{
-    target = e.target;
+    let target = e.target;
     if(target.classList.contains("edit")){
-        selectedRow = target.parentElement.parentElement;
+       let selectedRow = target.parentElement.parentElement;
         document.querySelector("#firstName").value = selectedRow.children[0].textContent;
         document.querySelector("#lastName").value = selectedRow.children[1].textContent;
         document.querySelector("#rollNo").value = selectedRow.children[2].textContent;
@@ -86,9 +107,9 @@ document.querySelector("#student-list").addEventListener("click", (e) =>{
 // Delete Data (Borrar datos)
 
 document.querySelector("#student-list").addEventListener("click",(e) =>{
-    target = e.target;
+    let target = e.target;
     if(target.classList.contains("delete")){
         target.parentElement.parentElement.remove();
-        showAlert("Student Data Deleted", "danger");
+        showAlert("Datos Borrados", "danger");
     }
 });
