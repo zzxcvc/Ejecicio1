@@ -15,7 +15,7 @@ function showAlert(message, className){
 
 // borrar todos los campos
 function clearFields(){
-    document.querySelector("#firsName").value = "";
+    document.querySelector("#firstName").value = "";
     document.querySelector("#lastName").value = "";
     document.querySelector("#rollNo").value = "";
 }
@@ -30,27 +30,6 @@ document.querySelector("#student-form").addEventListener("submit", (e) =>{
     const lastName = document.querySelector("#lastName").value;
     const rollNo = document.querySelector("#rollNo").value;
 
-    addUserbtn.addEventListener("click", function(){
-        const addUserInputvalue = addUserInput.value;
-
-        if(addUserInputvalue){
-            let WebUSer = localStorage.getItem("localUser");
-
-            if(WebUSer == null) {
-                userObject =[];
-            }
-
-            else{userObject - JSON.àrse(WebUSer);
-            }
-            userObject.push({
-                'user':addUserInputvalue
-            });
-            localStorage.setItem("localUser" , JSON.stringify(userObject));
-            addUserInput.value - '';
-        }
-        mostrarUser();
-    })
-
     // validar
     if(firstName == "" || lastName == "" || rollNo == ""){
         showAlert("Por favor, complete todos los campos", "danger");
@@ -61,12 +40,12 @@ document.querySelector("#student-form").addEventListener("submit", (e) =>{
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td> ${firsName} </td>
+                <td>${firstName} </td>
                 <td>${lastName}</td>
                 <td>${rollNo}</td>
                 <td>
                 <a href="#" class="btn btn-warning btn-sm edit">Editar</a>
-                <a href="#" class="btn btn-danger btn-sm delete">borrar</a> </td>
+                <a href="#" class="btn btn-danger btn-sm delete">borrar</a>
 
             `;
                 
