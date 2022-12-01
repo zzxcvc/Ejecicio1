@@ -1,0 +1,21 @@
+{
+  "type":"module",
+  "name": "ejecicio1",
+  "version": "1.0.0",
+  "description": "Introducción:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzxcvc/Ejecicio1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzxcvc/Ejecicio1/issues"
+  },
+  "homepage": "https://github.com/zzxcvc/Ejecicio1#readme"
+}
